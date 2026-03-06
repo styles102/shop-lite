@@ -1,0 +1,6 @@
+{
+  "type": "aspire",
+  "request": "launch",
+  "name": "Aspire: Launch Default AppHost",
+  "program": "${workspaceFolder}/shop-lite.AppHost/shop-lite.AppHost"
+}

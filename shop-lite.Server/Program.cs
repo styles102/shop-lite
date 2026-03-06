@@ -34,6 +34,9 @@ if (app.Environment.IsDevelopment())
 app.UseOutputCache();
 
 var api = app.MapGroup("/api");
+api.MapProductEndpoints();
+api.MapBasketEndpoints();
+api.MapOrderEndpoints();
 
 app.MapDefaultEndpoints();
 

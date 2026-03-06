@@ -23,3 +23,20 @@ export async function getAdminOrders(token: string): Promise<AdminOrder[]> {
   if (!res.ok) throw new Error('Failed to fetch orders')
   return z.array(AdminOrderSchema).parse(await res.json())
 }
+
+export async function updateOrderStatus(
+  id: string,
+  status: 'Paid' | 'Refunded',
+  token: string
+): Promise<void> {
+  const res = await fetch(`${base}/api/admin/orders/${id}/status`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify({ status }),
+  })
+  console.log(res);
+  if (!res.ok) throw new Error(`Failed to update order status: ${res.status}`)
+}

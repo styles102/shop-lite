@@ -25,7 +25,9 @@ var server = builder.AddProject<Projects.shop_lite_Server>("server")
 builder.AddProject<Projects.shop_lite_Worker>("worker")
     .WithReference(messaging)
     .WithReference(mailpit)
-    .WaitFor(messaging);
+    .WithReference(postgres)
+    .WaitFor(messaging)
+    .WaitFor(postgres);
 
 var webfrontend = builder.AddJavaScriptApp("webfrontend", "../frontend", "dev")
     .WithReference(server)

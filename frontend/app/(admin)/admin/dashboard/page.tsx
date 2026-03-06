@@ -3,13 +3,13 @@ import { redirect } from 'next/navigation'
 import { getAdminOrders } from '@/lib/api/admin'
 import { Badge } from '@/components/ui/badge'
 import type { AdminOrder } from '@/lib/schemas/admin'
+import { StatusActions } from './StatusActions'
 
 function StatusBadge({ status }: { status: AdminOrder['status'] }) {
-  return (
-    <Badge variant={status === 'Paid' ? 'default' : 'secondary'}>
-      {status}
-    </Badge>
-  )
+  const variant =
+    status === 'Paid' ? 'default' :
+    status === 'Refunded' ? 'destructive' : 'secondary'
+  return <Badge variant={variant}>{status}</Badge>
 }
 
 function DeliveryBadge({ status }: { status: AdminOrder['deliveryStatus'] }) {
@@ -51,6 +51,7 @@ export default async function DashboardPage() {
                 <th className="px-4 py-3 text-left font-medium text-gray-600">Payment</th>
                 <th className="px-4 py-3 text-left font-medium text-gray-600">Delivery</th>
                 <th className="px-4 py-3 text-left font-medium text-gray-600">Date</th>
+                <th className="px-4 py-3 text-left font-medium text-gray-600">Actions</th>
               </tr>
             </thead>
             <tbody className="divide-y">
@@ -68,6 +69,9 @@ export default async function DashboardPage() {
                       day: 'numeric', month: 'short', year: 'numeric',
                       hour: '2-digit', minute: '2-digit',
                     })}
+                  </td>
+                  <td className="px-4 py-3">
+                    <StatusActions orderId={order.id} status={order.status} />
                   </td>
                 </tr>
               ))}

@@ -11,5 +11,5 @@ public class Order
     public DateTimeOffset CreatedAt { get; set; }
 }
 
-public enum OrderStatus { Unpaid, Paid }
+public enum OrderStatus { Unpaid, Paid, Refunded }
 public enum DeliveryStatus { Processing, Despatched, Delivered }

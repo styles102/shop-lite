@@ -9,16 +9,16 @@ export const AddressSchema = z.object({
 })
 
 export const OrderItemSchema = z.object({
-  id: z.string().uuid(),
-  orderId: z.string().uuid(),
-  productSku: z.string().uuid(),
+  id: z.uuid(),
+  orderId: z.uuid(),
+  productSku: z.uuid(),
   productName: z.string(),
   unitPrice: z.number(),
   quantity: z.number().int(),
 })
 
 export const OrderSchema = z.object({
-  id: z.string().uuid(),
+  id: z.uuid(),
   customerEmail: z.string().email(),
   billingAddress: AddressSchema,
   deliveryAddress: AddressSchema,

@@ -2,15 +2,21 @@
 
 import { cookies } from 'next/headers'
 import { revalidatePath } from 'next/cache'
-import { createBasket, upsertItem } from '@/lib/api/baskets'
+import { createBasket, getBasket, upsertItem } from '@/lib/api/baskets'
 
 export async function getOrCreateBasketId(): Promise<string> {
   const jar = await cookies()
-  let id = jar.get('basketId')?.value
-  if (!id) {
-    id = await createBasket()
-    jar.set('basketId', id, { path: '/', httpOnly: true, sameSite: 'lax' })
+  const existing = jar.get('basketId')?.value
+  if (existing) {
+    try {
+      await getBasket(existing)
+      return existing
+    } catch {
+      // Basket no longer exists — fall through to create a new one
+    }
   }
+  const id = await createBasket()
+  jar.set('basketId', id, { path: '/', httpOnly: true, sameSite: 'lax' })
   return id
 }
 

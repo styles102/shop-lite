@@ -19,6 +19,7 @@ export async function upsertItem(basketId: string, productSku: string, quantity:
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ quantity }),
   })
+  console.log(res);
   if (!res.ok) throw new Error('Failed to update basket item')
 }
 

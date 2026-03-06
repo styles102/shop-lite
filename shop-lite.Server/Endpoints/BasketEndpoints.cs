@@ -33,8 +33,8 @@ public static class BasketEndpoints
 
             if (basket is null) return Results.NotFound();
 
-            var product = await db.Products.FindAsync(productSku);
-            if (product is null) return Results.NotFound();
+            var productExists = await db.Products.AnyAsync(p => p.Sku == productSku);
+            if (!productExists) return Results.NotFound();
 
             var existing = basket.Items.FirstOrDefault(i => i.ProductSku == productSku);
 
@@ -54,7 +54,7 @@ public static class BasketEndpoints
             }
             else
             {
-                basket.Items.Add(new BasketItem
+                db.BasketItems.Add(new BasketItem
                 {
                     Id = Guid.NewGuid(),
                     BasketId = id,

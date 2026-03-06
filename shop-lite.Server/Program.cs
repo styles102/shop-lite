@@ -19,11 +19,12 @@ builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
-// Apply EF Core migrations on startup
+// Apply EF Core migrations and seed data on startup
 await using (var scope = app.Services.CreateAsyncScope())
 {
-    await scope.ServiceProvider.GetRequiredService<ShopDbContext>()
-        .Database.MigrateAsync();
+    var db = scope.ServiceProvider.GetRequiredService<ShopDbContext>();
+    await db.Database.MigrateAsync();
+    await SeedData.SeedAsync(db);
 }
 
 // Configure the HTTP request pipeline.

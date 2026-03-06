@@ -54,6 +54,10 @@
               "target": "Package",
               "version": "[13.1.2, )"
             },
+            "Aspire.RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[13.1.2, )"
+            },
             "Aspire.StackExchange.Redis.OutputCaching": {
               "target": "Package",
               "version": "[13.1.2, )"

@@ -7,6 +7,7 @@ builder.AddServiceDefaults();
 builder.AddRedisClientBuilder("cache")
     .WithOutputCache();
 builder.AddNpgsqlDbContext<ShopDbContext>("shopdb");
+builder.AddRabbitMQClient("messaging");
 
 // Add services to the container.
 builder.Services.AddProblemDetails();

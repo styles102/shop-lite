@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7Q8Np+eLgcA=",
+  "dgSpecHash": "6Q/1uLCyNWg=",
   "success": true,
   "projectFilePath": "c:\\Training\\.net Aspire\\shop-lite\\shop-lite.AppHost\\shop-lite.AppHost.csproj",
   "expectedPackageFiles": [
@@ -10,10 +10,13 @@
     "C:\\Users\\LiamStyles\\.nuget\\packages\\aspire.hosting.javascript\\13.1.2\\aspire.hosting.javascript.13.1.2.nupkg.sha512",
     "C:\\Users\\LiamStyles\\.nuget\\packages\\aspire.hosting.orchestration.win-x64\\13.1.2\\aspire.hosting.orchestration.win-x64.13.1.2.nupkg.sha512",
     "C:\\Users\\LiamStyles\\.nuget\\packages\\aspire.hosting.postgresql\\13.1.2\\aspire.hosting.postgresql.13.1.2.nupkg.sha512",
+    "C:\\Users\\LiamStyles\\.nuget\\packages\\aspire.hosting.rabbitmq\\13.1.2\\aspire.hosting.rabbitmq.13.1.2.nupkg.sha512",
     "C:\\Users\\LiamStyles\\.nuget\\packages\\aspire.hosting.redis\\13.1.2\\aspire.hosting.redis.13.1.2.nupkg.sha512",
     "C:\\Users\\LiamStyles\\.nuget\\packages\\aspnetcore.healthchecks.npgsql\\9.0.0\\aspnetcore.healthchecks.npgsql.9.0.0.nupkg.sha512",
+    "C:\\Users\\LiamStyles\\.nuget\\packages\\aspnetcore.healthchecks.rabbitmq\\9.0.0\\aspnetcore.healthchecks.rabbitmq.9.0.0.nupkg.sha512",
     "C:\\Users\\LiamStyles\\.nuget\\packages\\aspnetcore.healthchecks.redis\\9.0.0\\aspnetcore.healthchecks.redis.9.0.0.nupkg.sha512",
     "C:\\Users\\LiamStyles\\.nuget\\packages\\aspnetcore.healthchecks.uris\\9.0.0\\aspnetcore.healthchecks.uris.9.0.0.nupkg.sha512",
+    "C:\\Users\\LiamStyles\\.nuget\\packages\\communitytoolkit.aspire.hosting.mailpit\\13.1.1\\communitytoolkit.aspire.hosting.mailpit.13.1.1.nupkg.sha512",
     "C:\\Users\\LiamStyles\\.nuget\\packages\\fractions\\7.3.0\\fractions.7.3.0.nupkg.sha512",
     "C:\\Users\\LiamStyles\\.nuget\\packages\\google.protobuf\\3.33.0\\google.protobuf.3.33.0.nupkg.sha512",
     "C:\\Users\\LiamStyles\\.nuget\\packages\\grpc.aspnetcore\\2.71.0\\grpc.aspnetcore.2.71.0.nupkg.sha512",
@@ -69,11 +72,13 @@
     "C:\\Users\\LiamStyles\\.nuget\\packages\\npgsql\\8.0.3\\npgsql.8.0.3.nupkg.sha512",
     "C:\\Users\\LiamStyles\\.nuget\\packages\\pipelines.sockets.unofficial\\2.2.8\\pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
     "C:\\Users\\LiamStyles\\.nuget\\packages\\polly.core\\8.6.4\\polly.core.8.6.4.nupkg.sha512",
+    "C:\\Users\\LiamStyles\\.nuget\\packages\\rabbitmq.client\\7.1.2\\rabbitmq.client.7.1.2.nupkg.sha512",
     "C:\\Users\\LiamStyles\\.nuget\\packages\\semver\\3.0.0\\semver.3.0.0.nupkg.sha512",
     "C:\\Users\\LiamStyles\\.nuget\\packages\\stackexchange.redis\\2.9.32\\stackexchange.redis.2.9.32.nupkg.sha512",
     "C:\\Users\\LiamStyles\\.nuget\\packages\\streamjsonrpc\\2.22.23\\streamjsonrpc.2.22.23.nupkg.sha512",
     "C:\\Users\\LiamStyles\\.nuget\\packages\\system.diagnostics.eventlog\\10.0.1\\system.diagnostics.eventlog.10.0.1.nupkg.sha512",
     "C:\\Users\\LiamStyles\\.nuget\\packages\\system.io.hashing\\9.0.10\\system.io.hashing.9.0.10.nupkg.sha512",
+    "C:\\Users\\LiamStyles\\.nuget\\packages\\system.threading.ratelimiting\\8.0.0\\system.threading.ratelimiting.8.0.0.nupkg.sha512",
     "C:\\Users\\LiamStyles\\.nuget\\packages\\yamldotnet\\16.3.0\\yamldotnet.16.3.0.nupkg.sha512"
   ],
   "logs": []

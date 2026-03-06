@@ -10,11 +10,14 @@
 
   <ItemGroup>
     <ProjectReference Include="..\shop-lite.Server\shop-lite.Server.csproj" />
+    <ProjectReference Include="..\shop-lite.Worker\shop-lite.Worker.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Aspire.Hosting.JavaScript" Version="13.1.2" />
+    <PackageReference Include="CommunityToolkit.Aspire.Hosting.MailPit" Version="13.1.1" />
     <PackageReference Include="Aspire.Hosting.PostgreSQL" Version="13.1.2" />
+    <PackageReference Include="Aspire.Hosting.RabbitMQ" Version="13.1.2" />
     <PackageReference Include="Aspire.Hosting.Redis" Version="13.1.2" />
   </ItemGroup>
 </Project>

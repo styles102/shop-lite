@@ -1,6 +1,15 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'picsum.photos',
+        port: ''
+      }
+    ]
+  },
   async rewrites() {
     const apiBase =
       process.env['services__server__https__0'] ??

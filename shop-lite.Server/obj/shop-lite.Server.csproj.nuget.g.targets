@@ -8,6 +8,7 @@
     <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.openapi\10.0.1\build\Microsoft.AspNetCore.OpenApi.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.openapi\10.0.1\build\Microsoft.AspNetCore.OpenApi.targets')" />
     <Import Project="$(NuGetPackageRoot)aspire.stackexchange.redis\13.1.2\buildTransitive\net10.0\Aspire.StackExchange.Redis.targets" Condition="Exists('$(NuGetPackageRoot)aspire.stackexchange.redis\13.1.2\buildTransitive\net10.0\Aspire.StackExchange.Redis.targets')" />
     <Import Project="$(NuGetPackageRoot)aspire.stackexchange.redis.outputcaching\13.1.2\buildTransitive\net10.0\Aspire.StackExchange.Redis.OutputCaching.targets" Condition="Exists('$(NuGetPackageRoot)aspire.stackexchange.redis.outputcaching\13.1.2\buildTransitive\net10.0\Aspire.StackExchange.Redis.OutputCaching.targets')" />
+    <Import Project="$(NuGetPackageRoot)aspire.rabbitmq.client\13.1.2\buildTransitive\net10.0\Aspire.RabbitMQ.Client.targets" Condition="Exists('$(NuGetPackageRoot)aspire.rabbitmq.client\13.1.2\buildTransitive\net10.0\Aspire.RabbitMQ.Client.targets')" />
     <Import Project="$(NuGetPackageRoot)aspire.npgsql.entityframeworkcore.postgresql\13.1.2\buildTransitive\net10.0\Aspire.Npgsql.EntityFrameworkCore.PostgreSQL.targets" Condition="Exists('$(NuGetPackageRoot)aspire.npgsql.entityframeworkcore.postgresql\13.1.2\buildTransitive\net10.0\Aspire.Npgsql.EntityFrameworkCore.PostgreSQL.targets')" />
   </ImportGroup>
 </Project>

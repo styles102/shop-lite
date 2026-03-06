@@ -1,16 +1,16 @@
-import Image from 'next/image'
-import { getProducts } from '@/lib/api/products'
 import { addToBasket } from '@/actions/basket'
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+import { getProducts } from '@/lib/api/products'
 import type { Product } from '@/lib/schemas/product'
+import Image from 'next/image'
 
 function ProductCard({ product }: { product: Product }) {
   const effectivePrice = product.salePrice ?? product.price
 
   return (
-    <Card className="flex flex-col">
+    <Card className="flex flex-col pt-0">
       {product.imageUrl && (
         <div className="relative h-48 w-full overflow-hidden rounded-t-lg">
           <Image src={product.imageUrl} alt={product.name} fill className="object-cover" />

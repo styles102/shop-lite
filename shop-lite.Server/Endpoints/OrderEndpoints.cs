@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using RabbitMQ.Client;
+using System.Text.Json;
 
 public static class OrderEndpoints
 {
@@ -6,7 +8,7 @@ public static class OrderEndpoints
     {
         var group = routes.MapGroup("/orders");
 
-        group.MapPost("/", async (CreateOrderRequest request, ShopDbContext db) =>
+        group.MapPost("/", async (CreateOrderRequest request, ShopDbContext db, IConnection rabbitConnection) =>
         {
             var basket = await db.Baskets
                 .Include(b => b.Items)
@@ -38,6 +40,20 @@ public static class OrderEndpoints
             db.Orders.Add(order);
             db.Baskets.Remove(basket);
             await db.SaveChangesAsync();
+
+            var msg = new OrderConfirmationMessage(
+                order.Id,
+                order.CustomerEmail,
+                order.OrderTotal,
+                items.Select(i => new OrderConfirmationItem(i.ProductName, i.Quantity, i.UnitPrice)).ToList());
+
+            await using var channel = await rabbitConnection.CreateChannelAsync();
+            await channel.QueueDeclareAsync("order-confirmations", durable: true,
+                exclusive: false, autoDelete: false);
+            await channel.BasicPublishAsync(
+                exchange: "",
+                routingKey: "order-confirmations",
+                body: JsonSerializer.SerializeToUtf8Bytes(msg));
 
             return Results.Ok(new { order.Id });
         });

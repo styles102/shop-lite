@@ -1,9 +1,21 @@
 using Microsoft.EntityFrameworkCore;
+using System.Security.Cryptography;
 
 public static class SeedData
 {
     public static async Task SeedAsync(ShopDbContext db)
     {
+        if (!await db.AdminUsers.AnyAsync())
+        {
+            db.AdminUsers.Add(new AdminUser
+            {
+                Id = Guid.NewGuid(),
+                Email = "admin@shop-lite.dev",
+                PasswordHash = HashPassword("Admin123!")
+            });
+            await db.SaveChangesAsync();
+        }
+
         if (await db.Products.AnyAsync()) return;
 
         db.Products.AddRange(
@@ -90,5 +102,24 @@ public static class SeedData
         );
 
         await db.SaveChangesAsync();
+    }
+
+    public static string HashPassword(string password)
+    {
+        var salt = RandomNumberGenerator.GetBytes(16);
+        var hash = Rfc2898DeriveBytes.Pbkdf2(
+            password, salt, 100_000, HashAlgorithmName.SHA256, 32);
+        return $"{Convert.ToBase64String(salt)}.{Convert.ToBase64String(hash)}";
+    }
+
+    public static bool VerifyPassword(string password, string stored)
+    {
+        var parts = stored.Split('.');
+        if (parts.Length != 2) return false;
+        var salt = Convert.FromBase64String(parts[0]);
+        var expectedHash = Convert.FromBase64String(parts[1]);
+        var actualHash = Rfc2898DeriveBytes.Pbkdf2(
+            password, salt, 100_000, HashAlgorithmName.SHA256, 32);
+        return CryptographicOperations.FixedTimeEquals(actualHash, expectedHash);
     }
 }

@@ -8,6 +8,7 @@ public class Order
     public OrderStatus Status { get; set; } = OrderStatus.Unpaid;
     public DeliveryStatus DeliveryStatus { get; set; } = DeliveryStatus.Processing;
     public ICollection<OrderItem> Items { get; set; } = [];
+    public DateTimeOffset CreatedAt { get; set; }
 }
 
 public enum OrderStatus { Unpaid, Paid }

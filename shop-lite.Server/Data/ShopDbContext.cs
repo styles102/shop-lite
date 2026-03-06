@@ -7,6 +7,7 @@ public class ShopDbContext(DbContextOptions<ShopDbContext> options) : DbContext(
     public DbSet<BasketItem> BasketItems => Set<BasketItem>();
     public DbSet<Order> Orders => Set<Order>();
     public DbSet<OrderItem> OrderItems => Set<OrderItem>();
+    public DbSet<AdminUser> AdminUsers => Set<AdminUser>();
 
     protected override void OnModelCreating(ModelBuilder model)
     {
@@ -30,6 +31,13 @@ public class ShopDbContext(DbContextOptions<ShopDbContext> options) : DbContext(
             e.OwnsOne(o => o.BillingAddress);
             e.OwnsOne(o => o.DeliveryAddress);
             e.Property(o => o.OrderTotal).HasPrecision(10, 2);
+            e.Property(o => o.CreatedAt).HasDefaultValueSql("now()");
+        });
+
+        model.Entity<AdminUser>(e =>
+        {
+            e.HasKey(a => a.Id);
+            e.HasIndex(a => a.Email).IsUnique();
         });
 
         model.Entity<OrderItem>(e =>

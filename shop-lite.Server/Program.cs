@@ -10,6 +10,9 @@ builder.AddNpgsqlDbContext<ShopDbContext>("shopdb");
 
 // Add services to the container.
 builder.Services.AddProblemDetails();
+builder.Services.ConfigureHttpJsonOptions(options =>
+    options.SerializerOptions.ReferenceHandler =
+        System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles);
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
@@ -39,7 +42,5 @@ api.MapBasketEndpoints();
 api.MapOrderEndpoints();
 
 app.MapDefaultEndpoints();
-
-app.UseFileServer();
 
 app.Run();

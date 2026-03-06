@@ -14,10 +14,10 @@ var server = builder.AddProject<Projects.shop_lite_Server>("server")
     .WithHttpHealthCheck("/health")
     .WithExternalHttpEndpoints();
 
-var webfrontend = builder.AddViteApp("webfrontend", "../frontend")
+var webfrontend = builder.AddJavaScriptApp("webfrontend", "../frontend", "dev")
     .WithReference(server)
-    .WaitFor(server);
-
-server.PublishWithContainerFiles(webfrontend, "wwwroot");
+    .WaitFor(server)
+    .WithHttpEndpoint(env: "PORT")
+    .WithExternalHttpEndpoints();
 
 builder.Build().Run();

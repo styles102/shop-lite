@@ -1,0 +1,58 @@
+{
+  "node": {
+    "406311bd6cabcfaad0bf47cc72ab3172b943eb5b3a": {
+      "workers": {
+        "app/(public)/products/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22c%3A%5C%5CTraining%5C%5C.net%20Aspire%5C%5Cshop-lite%5C%5Cfrontend%5C%5Capp%5C%5C(public)%5C%5Cproducts%5C%5Cpage.tsx%22%2C%5B%7B%22id%22%3A%22406311bd6cabcfaad0bf47cc72ab3172b943eb5b3a%22%2C%22exportedName%22%3A%22%24%24RSC_SERVER_ACTION_0%22%2C%22filename%22%3A%22..%2Fc%3A%5C%5CTraining%5C%5C.net%20Aspire%5C%5Cshop-lite%5C%5Cfrontend%5C%5Capp%5C%5C(public)%5C%5Cproducts%5C%5Cpage.tsx%22%7D%5D%5D%2C%5B%22c%3A%5C%5CTraining%5C%5C.net%20Aspire%5C%5Cshop-lite%5C%5Cfrontend%5C%5Cactions%5C%5Cbasket.ts%22%2C%5B%7B%22id%22%3A%22007b861e4ad2f2d59f5d7f00047b9aa3474fde8bee%22%2C%22exportedName%22%3A%22getOrCreateBasketId%22%2C%22filename%22%3A%22..%2Fc%3A%5C%5CTraining%5C%5C.net%20Aspire%5C%5Cshop-lite%5C%5Cfrontend%5C%5Cactions%5C%5Cbasket.ts%22%7D%2C%7B%22id%22%3A%22401a6e6fc5281a7edb51199feeaddf45abe31e9d2e%22%2C%22exportedName%22%3A%22removeFromBasket%22%2C%22filename%22%3A%22..%2Fc%3A%5C%5CTraining%5C%5C.net%20Aspire%5C%5Cshop-lite%5C%5Cfrontend%5C%5Cactions%5C%5Cbasket.ts%22%7D%2C%7B%22id%22%3A%2260272729c87a00b0f4d8647458968c5592cd99ce4a%22%2C%22exportedName%22%3A%22addToBasket%22%2C%22filename%22%3A%22..%2Fc%3A%5C%5CTraining%5C%5C.net%20Aspire%5C%5Cshop-lite%5C%5Cfrontend%5C%5Cactions%5C%5Cbasket.ts%22%7D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(public)/products/page": "rsc"
+      },
+      "filename": "../c:\\Training\\.net Aspire\\shop-lite\\frontend\\app\\(public)\\products\\page.tsx",
+      "exportedName": "$$RSC_SERVER_ACTION_0"
+    },
+    "007b861e4ad2f2d59f5d7f00047b9aa3474fde8bee": {
+      "workers": {
+        "app/(public)/products/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22c%3A%5C%5CTraining%5C%5C.net%20Aspire%5C%5Cshop-lite%5C%5Cfrontend%5C%5Capp%5C%5C(public)%5C%5Cproducts%5C%5Cpage.tsx%22%2C%5B%7B%22id%22%3A%22406311bd6cabcfaad0bf47cc72ab3172b943eb5b3a%22%2C%22exportedName%22%3A%22%24%24RSC_SERVER_ACTION_0%22%2C%22filename%22%3A%22..%2Fc%3A%5C%5CTraining%5C%5C.net%20Aspire%5C%5Cshop-lite%5C%5Cfrontend%5C%5Capp%5C%5C(public)%5C%5Cproducts%5C%5Cpage.tsx%22%7D%5D%5D%2C%5B%22c%3A%5C%5CTraining%5C%5C.net%20Aspire%5C%5Cshop-lite%5C%5Cfrontend%5C%5Cactions%5C%5Cbasket.ts%22%2C%5B%7B%22id%22%3A%22007b861e4ad2f2d59f5d7f00047b9aa3474fde8bee%22%2C%22exportedName%22%3A%22getOrCreateBasketId%22%2C%22filename%22%3A%22..%2Fc%3A%5C%5CTraining%5C%5C.net%20Aspire%5C%5Cshop-lite%5C%5Cfrontend%5C%5Cactions%5C%5Cbasket.ts%22%7D%2C%7B%22id%22%3A%22401a6e6fc5281a7edb51199feeaddf45abe31e9d2e%22%2C%22exportedName%22%3A%22removeFromBasket%22%2C%22filename%22%3A%22..%2Fc%3A%5C%5CTraining%5C%5C.net%20Aspire%5C%5Cshop-lite%5C%5Cfrontend%5C%5Cactions%5C%5Cbasket.ts%22%7D%2C%7B%22id%22%3A%2260272729c87a00b0f4d8647458968c5592cd99ce4a%22%2C%22exportedName%22%3A%22addToBasket%22%2C%22filename%22%3A%22..%2Fc%3A%5C%5CTraining%5C%5C.net%20Aspire%5C%5Cshop-lite%5C%5Cfrontend%5C%5Cactions%5C%5Cbasket.ts%22%7D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(public)/products/page": "rsc"
+      },
+      "filename": "../c:\\Training\\.net Aspire\\shop-lite\\frontend\\actions\\basket.ts",
+      "exportedName": "getOrCreateBasketId"
+    },
+    "401a6e6fc5281a7edb51199feeaddf45abe31e9d2e": {
+      "workers": {
+        "app/(public)/products/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22c%3A%5C%5CTraining%5C%5C.net%20Aspire%5C%5Cshop-lite%5C%5Cfrontend%5C%5Capp%5C%5C(public)%5C%5Cproducts%5C%5Cpage.tsx%22%2C%5B%7B%22id%22%3A%22406311bd6cabcfaad0bf47cc72ab3172b943eb5b3a%22%2C%22exportedName%22%3A%22%24%24RSC_SERVER_ACTION_0%22%2C%22filename%22%3A%22..%2Fc%3A%5C%5CTraining%5C%5C.net%20Aspire%5C%5Cshop-lite%5C%5Cfrontend%5C%5Capp%5C%5C(public)%5C%5Cproducts%5C%5Cpage.tsx%22%7D%5D%5D%2C%5B%22c%3A%5C%5CTraining%5C%5C.net%20Aspire%5C%5Cshop-lite%5C%5Cfrontend%5C%5Cactions%5C%5Cbasket.ts%22%2C%5B%7B%22id%22%3A%22007b861e4ad2f2d59f5d7f00047b9aa3474fde8bee%22%2C%22exportedName%22%3A%22getOrCreateBasketId%22%2C%22filename%22%3A%22..%2Fc%3A%5C%5CTraining%5C%5C.net%20Aspire%5C%5Cshop-lite%5C%5Cfrontend%5C%5Cactions%5C%5Cbasket.ts%22%7D%2C%7B%22id%22%3A%22401a6e6fc5281a7edb51199feeaddf45abe31e9d2e%22%2C%22exportedName%22%3A%22removeFromBasket%22%2C%22filename%22%3A%22..%2Fc%3A%5C%5CTraining%5C%5C.net%20Aspire%5C%5Cshop-lite%5C%5Cfrontend%5C%5Cactions%5C%5Cbasket.ts%22%7D%2C%7B%22id%22%3A%2260272729c87a00b0f4d8647458968c5592cd99ce4a%22%2C%22exportedName%22%3A%22addToBasket%22%2C%22filename%22%3A%22..%2Fc%3A%5C%5CTraining%5C%5C.net%20Aspire%5C%5Cshop-lite%5C%5Cfrontend%5C%5Cactions%5C%5Cbasket.ts%22%7D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(public)/products/page": "rsc"
+      },
+      "filename": "../c:\\Training\\.net Aspire\\shop-lite\\frontend\\actions\\basket.ts",
+      "exportedName": "removeFromBasket"
+    },
+    "60272729c87a00b0f4d8647458968c5592cd99ce4a": {
+      "workers": {
+        "app/(public)/products/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22c%3A%5C%5CTraining%5C%5C.net%20Aspire%5C%5Cshop-lite%5C%5Cfrontend%5C%5Capp%5C%5C(public)%5C%5Cproducts%5C%5Cpage.tsx%22%2C%5B%7B%22id%22%3A%22406311bd6cabcfaad0bf47cc72ab3172b943eb5b3a%22%2C%22exportedName%22%3A%22%24%24RSC_SERVER_ACTION_0%22%2C%22filename%22%3A%22..%2Fc%3A%5C%5CTraining%5C%5C.net%20Aspire%5C%5Cshop-lite%5C%5Cfrontend%5C%5Capp%5C%5C(public)%5C%5Cproducts%5C%5Cpage.tsx%22%7D%5D%5D%2C%5B%22c%3A%5C%5CTraining%5C%5C.net%20Aspire%5C%5Cshop-lite%5C%5Cfrontend%5C%5Cactions%5C%5Cbasket.ts%22%2C%5B%7B%22id%22%3A%22007b861e4ad2f2d59f5d7f00047b9aa3474fde8bee%22%2C%22exportedName%22%3A%22getOrCreateBasketId%22%2C%22filename%22%3A%22..%2Fc%3A%5C%5CTraining%5C%5C.net%20Aspire%5C%5Cshop-lite%5C%5Cfrontend%5C%5Cactions%5C%5Cbasket.ts%22%7D%2C%7B%22id%22%3A%22401a6e6fc5281a7edb51199feeaddf45abe31e9d2e%22%2C%22exportedName%22%3A%22removeFromBasket%22%2C%22filename%22%3A%22..%2Fc%3A%5C%5CTraining%5C%5C.net%20Aspire%5C%5Cshop-lite%5C%5Cfrontend%5C%5Cactions%5C%5Cbasket.ts%22%7D%2C%7B%22id%22%3A%2260272729c87a00b0f4d8647458968c5592cd99ce4a%22%2C%22exportedName%22%3A%22addToBasket%22%2C%22filename%22%3A%22..%2Fc%3A%5C%5CTraining%5C%5C.net%20Aspire%5C%5Cshop-lite%5C%5Cfrontend%5C%5Cactions%5C%5Cbasket.ts%22%7D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(public)/products/page": "rsc"
+      },
+      "filename": "../c:\\Training\\.net Aspire\\shop-lite\\frontend\\actions\\basket.ts",
+      "exportedName": "addToBasket"
+    }
+  },
+  "edge": {},
+  "encryptionKey": "TZmHtw1B/FzoIonrl09UGVr6YqUDbmHyp97UZWJtbkA="
+}

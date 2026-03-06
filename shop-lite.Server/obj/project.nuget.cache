@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aaqKrCGKbpc=",
+  "dgSpecHash": "CYCSbm2/jsI=",
   "success": true,
-  "projectFilePath": "C:\\Training\\.net Aspire\\shop-lite\\shop-lite.Server\\shop-lite.Server.csproj",
+  "projectFilePath": "c:\\Training\\.net Aspire\\shop-lite\\shop-lite.Server\\shop-lite.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LiamStyles\\.nuget\\packages\\aspire.npgsql.entityframeworkcore.postgresql\\13.1.2\\aspire.npgsql.entityframeworkcore.postgresql.13.1.2.nupkg.sha512",
     "C:\\Users\\LiamStyles\\.nuget\\packages\\aspire.stackexchange.redis\\13.1.2\\aspire.stackexchange.redis.13.1.2.nupkg.sha512",

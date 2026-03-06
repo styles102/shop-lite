@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Training\\.net Aspire\\shop-lite\\shop-lite.Server\\shop-lite.Server.csproj": {}
+    "c:\\Training\\.net Aspire\\shop-lite\\shop-lite.Server\\shop-lite.Server.csproj": {}
   },
   "projects": {
-    "C:\\Training\\.net Aspire\\shop-lite\\shop-lite.Server\\shop-lite.Server.csproj": {
+    "c:\\Training\\.net Aspire\\shop-lite\\shop-lite.Server\\shop-lite.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Training\\.net Aspire\\shop-lite\\shop-lite.Server\\shop-lite.Server.csproj",
+        "projectUniqueName": "c:\\Training\\.net Aspire\\shop-lite\\shop-lite.Server\\shop-lite.Server.csproj",
         "projectName": "shop-lite.Server",
-        "projectPath": "C:\\Training\\.net Aspire\\shop-lite\\shop-lite.Server\\shop-lite.Server.csproj",
+        "projectPath": "c:\\Training\\.net Aspire\\shop-lite\\shop-lite.Server\\shop-lite.Server.csproj",
         "packagesPath": "C:\\Users\\LiamStyles\\.nuget\\packages\\",
-        "outputPath": "C:\\Training\\.net Aspire\\shop-lite\\shop-lite.Server\\obj\\",
+        "outputPath": "c:\\Training\\.net Aspire\\shop-lite\\shop-lite.Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

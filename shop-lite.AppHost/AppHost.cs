@@ -2,9 +2,15 @@ var builder = DistributedApplication.CreateBuilder(args);
 
 var cache = builder.AddRedis("cache");
 
+var postgres = builder.AddPostgres("postgres")
+    .WithPgAdmin(pgAdmin => pgAdmin.WithHostPort(5050))
+    .AddDatabase("shopdb");
+
 var server = builder.AddProject<Projects.shop_lite_Server>("server")
     .WithReference(cache)
+    .WithReference(postgres)
     .WaitFor(cache)
+    .WaitFor(postgres)
     .WithHttpHealthCheck("/health")
     .WithExternalHttpEndpoints();
 

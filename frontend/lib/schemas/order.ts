@@ -29,7 +29,7 @@ export const OrderSchema = z.object({
 })
 
 export const CreateOrderSchema = z.object({
-  customerEmail: z.string().email('Valid email required'),
+  customerEmail: z.email('Valid email required'),
   billingAddress: AddressSchema,
   deliveryAddress: AddressSchema,
 })

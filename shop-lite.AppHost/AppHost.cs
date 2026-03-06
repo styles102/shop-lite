@@ -3,6 +3,7 @@ var builder = DistributedApplication.CreateBuilder(args);
 var cache = builder.AddRedis("cache");
 
 var postgres = builder.AddPostgres("postgres")
+    .WithDataVolume("shop-lite-postgres-data")
     .WithPgAdmin(pgAdmin => pgAdmin.WithHostPort(5050))
     .AddDatabase("shopdb");
 

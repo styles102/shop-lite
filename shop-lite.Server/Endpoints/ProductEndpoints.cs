@@ -7,13 +7,14 @@ public static class ProductEndpoints
         var group = routes.MapGroup("/products");
 
         group.MapGet("/", async (ShopDbContext db) =>
-            await db.Products.ToListAsync());
+            await db.Products.ToListAsync())
+            .CacheOutput(opts => opts.Expire(TimeSpan.FromMinutes(5)));
 
         group.MapGet("/{sku:guid}", async (Guid sku, ShopDbContext db) =>
         {
             var product = await db.Products.FindAsync(sku);
             return product is null ? Results.NotFound() : Results.Ok(product);
-        });
+        }).CacheOutput(opts => opts.Expire(TimeSpan.FromMinutes(5)));
 
         return routes;
     }

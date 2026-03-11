@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Separator } from '@/components/ui/separator'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { createOrder } from '@/lib/api/orders'
 import { CreateOrderSchema, type Address } from '@/lib/schemas/order'
 import { useRouter } from 'next/navigation'
@@ -72,7 +73,6 @@ export default function OrderPage({ basketId }: { basketId: string | undefined})
     }
 
     try {
-			console.log(basketId);
       const orderId = await createOrder(basketId, result.data)
       // Clear basket cookie
       document.cookie = 'basketId=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT'
@@ -84,25 +84,35 @@ export default function OrderPage({ basketId }: { basketId: string | undefined})
   }
 
   return (
-    <div className="max-w-xl">
-			{basketId}
-      <h1 className="text-2xl font-bold mb-6">Checkout</h1>
-      <form onSubmit={handleSubmit} className="space-y-6">
-        <div>
-          <Label htmlFor="customerEmail">Email address</Label>
-          <Input id="customerEmail" name="customerEmail" type="email" className="mt-1" required />
-        </div>
-        <Separator />
-        <AddressFields prefix="billingAddress" label="Billing address" />
-        <Separator />
-        <AddressFields prefix="deliveryAddress" label="Delivery address" />
+    <section className="mx-auto max-w-2xl">
+      <h1 className="mb-6 text-3xl font-bold tracking-tight">Checkout</h1>
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-lg">Order details</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div>
+              <Label htmlFor="customerEmail">Email address</Label>
+              <Input id="customerEmail" name="customerEmail" type="email" className="mt-1" required />
+            </div>
+            <Separator />
+            <AddressFields prefix="billingAddress" label="Billing address" />
+            <Separator />
+            <AddressFields prefix="deliveryAddress" label="Delivery address" />
 
-        {error && <p className="text-sm text-destructive">{error}</p>}
+            {error && (
+              <p className="rounded-md border border-destructive/30 bg-destructive/10 px-3 py-2 text-sm text-destructive">
+                {error}
+              </p>
+            )}
 
-        <Button type="submit" size="lg" className="w-full" disabled={submitting}>
-          {submitting ? 'Placing order…' : 'Place order'}
-        </Button>
-      </form>
-    </div>
+            <Button type="submit" size="lg" className="w-full" disabled={submitting}>
+              {submitting ? 'Placing order…' : 'Place order'}
+            </Button>
+          </form>
+        </CardContent>
+      </Card>
+    </section>
   )
 }

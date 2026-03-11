@@ -24,22 +24,22 @@ async function BasketCount() {
 export default function PagesLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
-        <header className="border-b">
-          <div className="mx-auto max-w-5xl flex items-center justify-between px-4 py-3">
+      <body className="min-h-screen bg-muted/30 text-foreground antialiased">
+        <header className="sticky top-0 z-10 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/70">
+          <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
             <Link href="/products" className="font-semibold text-lg tracking-tight">
               Shop Lite
             </Link>
             <nav className="flex items-center gap-6 text-sm">
-              <Link href="/products" className="hover:underline">Products</Link>
-              <Link href="/basket" className="flex items-center gap-1.5 hover:underline">
+              <Link href="/products" className="font-medium transition-colors hover:text-foreground/80">Products</Link>
+              <Link href="/basket" className="flex items-center gap-1.5 font-medium transition-colors hover:text-foreground/80">
                 Basket
                 <BasketCount />
               </Link>
             </nav>
           </div>
         </header>
-        <main className="mx-auto max-w-5xl px-4 py-8">{children}</main>
+        <main className="mx-auto w-full max-w-6xl px-4 py-8 sm:px-6 sm:py-10">{children}</main>
       </body>
     </html>
   )

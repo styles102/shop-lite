@@ -10,10 +10,15 @@ function ProductCard({ product }: { product: Product }) {
   const effectivePrice = product.salePrice ?? product.price
 
   return (
-    <Card className="flex flex-col pt-0">
+    <Card className="flex h-full flex-col overflow-hidden border-border/70 pt-0 transition-shadow hover:shadow-md">
       {product.imageUrl && (
         <div className="relative h-48 w-full overflow-hidden rounded-t-lg">
-          <Image src={product.imageUrl} alt={product.name} fill className="object-cover" />
+          <Image
+            src={product.imageUrl}
+            alt={product.name}
+            fill
+            className="object-cover transition-transform duration-300 hover:scale-[1.03]"
+          />
         </div>
       )}
       <CardHeader className="pb-2">
@@ -28,7 +33,7 @@ function ProductCard({ product }: { product: Product }) {
       <CardContent className="flex-1 pb-2">
         <p className="text-sm text-muted-foreground line-clamp-3">{product.description}</p>
         <div className="mt-3 flex items-baseline gap-2">
-          <span className="text-lg font-semibold">£{effectivePrice.toFixed(2)}</span>
+          <span className="text-xl font-semibold tracking-tight">£{effectivePrice.toFixed(2)}</span>
           {product.salePrice !== null && (
             <span className="text-sm text-muted-foreground line-through">
               £{product.price.toFixed(2)}
@@ -65,13 +70,18 @@ export default async function ProductsPage() {
   }
 
   return (
-    <div>
-      <h1 className="text-2xl font-bold mb-6">Products</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <section>
+      <div className="mb-8 flex items-end justify-between gap-4">
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight">Products</h1>
+          <p className="mt-2 text-sm text-muted-foreground">Find items currently available in store.</p>
+        </div>
+      </div>
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {products.map(product => (
           <ProductCard key={product.sku} product={product} />
         ))}
       </div>
-    </div>
+    </section>
   )
 }
